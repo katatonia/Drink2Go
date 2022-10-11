@@ -9,17 +9,17 @@
 
   <body class="page__body">
 
-		<header class="page-header container">
-			<a class="page-header__logo">
-				<img src="#" width="32" height="36" alt="Логотип Drink2Go">
-			</a>
-			<h1 class="slogan">Интернет-магазин кофейных напитков</h1>
+		<header class="page-header">
+      <div class="container">
+			  <a class="page-header__logo">
+			  	<img src="#" width="32" height="36" alt="Логотип Drink2Go">
+		  	</a>
+			  <h1 class="page-header__slogan">Интернет-магазин кофейных напитков</h1>
 
-			<nav class="main-nav">
+		    <nav class="main-nav">
 				<button class="main-nav__toggle" type="button">
 					<span class="visually-hidden">Открыть меню</span>
 				</button>
-				<div class="main-nav__wrapper">
 					<div class="main-nav__wrapper">
 						<ul class="main-nav__list site-list">
 							<li class="site-list__item site-list__item--active">
@@ -62,52 +62,53 @@
 							</li>
 						</ul>
 					</div>
-				</div>
-			</nav>
-
+			  </nav>
+      </div>
 		</header>
 
-		<main class="page-main container">
+		<main class="page-main">
 			<section class="promo">
-				<div class="promo__wrapper slider">
-					<ul class="slider__list">
-						<li class="slider__item">
-							<span class="slider__badge">Новинка!</span>
-							<h2 class="slider__heading">Декаф Флэт Уайт</h2>
-							<p class="slider__desc">
-								Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
-							</p>
-							<div class="slider__buy">
-								<span class="slider__old-price">295₽</span>
-								<span class="slider__price">225₽</span>
-								<button class="slider__btn">Заказать</button>
-							</div>
-						</li>
-						<li class="slider__item">
-							<span class="slider__badge">Новинка!</span>
-							<h2 class="slider__heading">Лавандовый латте</h2>
-							<p class="slider__desc">
-								Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
-							</p>
-							<div class="slider__buy">
-								<span class="slider__old-price">285₽</span>
-								<span class="slider__price">265₽</span>
-								<button class="slider__btn">Заказать</button>
-							</div>
-						</li>
-						<li class="slider__item">
-							<span class="slider__badge">Новинка!</span>
-							<h2 class="slider__heading">Тройной эспрессо</h2>
-							<p class="slider__desc">
-								Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость3
-							</p>
-							<div class="slider__buy">
-								<span class="slider__old-price">395₽</span>
-								<span class="slider__price">375₽</span>
-								<button class="slider__btn">Заказать</button>
-							</div>
-						</li>
-					</ul>
+				<div class="container">
+          <section class="slider">
+            <ul class="slider__list">
+              <li class="slider__item">
+                <span class="slider__badge">Новинка!</span>
+                <h2 class="slider__heading">Декаф Флэт Уайт</h2>
+                <p class="slider__desc">
+                  Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+                </p>
+                <div class="slider__buy">
+                  <span class="slider__old-price">295₽</span>
+                  <span class="slider__price">225₽</span>
+                  <button class="slider__btn">Заказать</button>
+                </div>
+              </li>
+              <li class="slider__item">
+                <span class="slider__badge">Новинка!</span>
+                <h2 class="slider__heading">Лавандовый латте</h2>
+                <p class="slider__desc">
+                  Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+                </p>
+                <div class="slider__buy">
+                  <span class="slider__old-price">285₽</span>
+                  <span class="slider__price">265₽</span>
+                  <button class="slider__btn">Заказать</button>
+                </div>
+              </li>
+              <li class="slider__item">
+                <span class="slider__badge">Новинка!</span>
+                <h2 class="slider__heading">Тройной эспрессо</h2>
+                <p class="slider__desc">
+                  Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость3
+                </p>
+                <div class="slider__buy">
+                  <span class="slider__old-price">395₽</span>
+                  <span class="slider__price">375₽</span>
+                  <button class="slider__btn">Заказать</button>
+                </div>
+              </li>
+            </ul>
+          </section>
 					<div class="slider__toggles">
 						<button class="slider__toggle slider__toggle--current" type="button"></button>
 						<button class="slider__toggle" type="button"></button>
@@ -121,7 +122,7 @@
 			</section>
 
 			<section class="features">
-				<div class="features__wrapper">
+				<div class="container">
 					<h2 class="features__title">Преимущества</h2>
 					<h3 class="features__subtitle">Главные причины выбрать Drink2Go</h3>
 					<ul class="features__list">
@@ -147,7 +148,7 @@
 			</section>
 
 			<section class="catalog">
-				<div class="catalog__wrapper">
+				<div class="container">
 					<h2 class="catalog__title">Каталог</h2>
 					<h3 class="catalog__subtitle">Каталог кофейных напитков</h3>
 
@@ -247,8 +248,9 @@
                 <img class="card__img" src="img/white.png" width="130" height="188" alt="Фото кофе">
               </a>
               <a class="card__link" href="#">
-                <h3 class="card__title">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</h3>
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
               </a>
+              <p class="card__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
               <span class="card__price">225₽</span>
               <a class="card__btn" href="#">В корзину</a>
             </li>
@@ -257,8 +259,9 @@
                 <img class="card__img" src="img/violet.png" width="130" height="188" alt="Фото кофе">
               </a>
               <a class="card__link" href="#">
-                <h3 class="card__title">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</h3>
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
               </a>
+              <p class="card__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
               <span class="card__price">225₽</span>
               <a class="card__btn" href="#">В корзину</a>
             </li>
@@ -267,8 +270,9 @@
                 <img class="card__img" src="img/black.png" width="130" height="188" alt="Фото кофе">
               </a>
               <a class="card__link" href="#">
-                <h3 class="card__title">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</h3>
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
               </a>
+              <p class="card__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
               <span class="card__price">225₽</span>
               <a class="card__btn" href="#">В корзину</a>
             </li>
@@ -277,8 +281,9 @@
                 <img class="card__img" src="img/pink.png" width="130" height="188" alt="Фото кофе">
               </a>
               <a class="card__link" href="#">
-                <h3 class="card__title">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</h3>
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
               </a>
+              <p class="card__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
               <span class="card__price">225₽</span>
               <a class="card__btn" href="#">В корзину</a>
             </li>
@@ -287,8 +292,9 @@
                 <img class="card__img" src="img/brown.png" width="130" height="188" alt="Фото кофе">
               </a>
               <a class="card__link" href="#">
-                <h3 class="card__title">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</h3>
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
               </a>
+              <p class="card__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
               <span class="card__price">225₽</span>
               <a class="card__btn" href="#">В корзину</a>
             </li>
@@ -297,8 +303,9 @@
                 <img class="card__img" src="img/yellow.png" width="130" height="188" alt="Фото кофе">
               </a>
               <a class="card__link" href="#">
-                <h3 class="card__title">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</h3>
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
               </a>
+              <p class="card__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
               <span class="card__price">225₽</span>
               <a class="card__btn" href="#">В корзину</a>
             </li>
@@ -314,7 +321,7 @@
               <li class="pagination__item">
                 <a class="pagination__link pagination__link--current">1</a>
               </li>
-              <li class="pagination__item">
+              <li class="pagination__item pagination__item--current">
                 <a class="pagination__link" href="#">2</a>
               </li>
               <li class="pagination__item">
@@ -349,10 +356,10 @@
       <div class="page-footer__wrapper">
 
         <div class="social">
-          <a class="page-header__logo">
+          <a class="page-footer__logo" href="#">
             <img src="#" width="82" height="36" alt="Логотип Drink2Go">
           </a>
-          <p class="slogan">Интернет-магазин кофейных напитков</p>
+          <p class="page-footer__slogan">Интернет-магазин кофейных напитков</p>
         </div>
 
         <div class="footer-nav">
@@ -382,7 +389,9 @@
           </div>
 
           <p class="page-footer__bottom">
-            <span class="page-footer__copyright">Разработано в HTML Academy</span>
+            <span class="page-footer__copyright">Разработано в
+              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </span>
           </p>
 
         </div>

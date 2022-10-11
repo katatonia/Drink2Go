@@ -1,0 +1,40 @@
+.card {
+  background-color: $white;
+  margin-top: 20px;
+}
+
+.card__title {
+  font: {
+    family: $montserrat-bold;
+    size: 18px;
+  }
+  line-height: 32px;
+}
+
+.card__desc {
+  font: {
+    family: $montserrat-regular;
+    size: 14px;
+  }
+  line-height: 20px;
+}
+
+.card__price {
+  font: {
+    family: $montserrat-semi-bold;
+    size: 16px;
+  }
+  line-height: 32px;
+}
+
+.card__btn {
+  font: {
+    family: $montserrat-regular;
+    size: 14px;
+  }
+  line-height: 20px;
+  color: $white;
+  background-color: $base-primary;
+  border-radius: 4px;
+  padding: 8px 20px 8px 45px;
+}

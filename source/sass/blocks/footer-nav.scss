@@ -1,0 +1,17 @@
+.footer-nav__title {
+  font: {
+    family: $montserrat-bold;
+    size: 14px;
+  }
+  line-height: 20px;
+  color: $base-primary
+}
+
+.footer-nav__list-item {
+  font: {
+    family: $montserrat-medium;
+    size: 12px;
+  }
+  line-height: 16px;
+  text-transform: uppercase;
+}

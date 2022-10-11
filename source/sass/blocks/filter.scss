@@ -1,0 +1,35 @@
+.filter__heading {
+  font: {
+    family: $montserrat-semi-bold;
+    size: 16px;
+    weight: 600;
+  }
+  line-height: 34px;
+}
+
+.filter__btn {
+  font: {
+    family: $montserrat-regular;
+    size: 14px;
+  }
+  line-height: 24px;
+  padding: 10px 14px;
+  border: none;
+
+  &--apply {
+    color: $white;
+    background-color: $base-primary;
+    border-radius: 4px;
+  }
+
+  &--reset {
+    color: $base-primary;
+    background-color: $white;
+  }
+}
+
+.filter__form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}

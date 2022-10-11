@@ -1,0 +1,19 @@
+.sorting__text {
+  font: {
+    family: $montserrat-semi-bold;
+    size: 16px;
+    weight: 600;
+  }
+  line-height: 24px;
+}
+
+.sorting__control {
+  font: {
+    family: $montserrat-bold;
+    size: 16px;
+  }
+  line-height: 24px;
+  color: $base-primary;
+  background-color: $lightest-grey;
+  border: none;
+}

@@ -1,0 +1,22 @@
+.catalog {
+  padding-top: 50px;
+  background-color: $lightest-grey;
+}
+
+.catalog__title {
+  font: {
+    family: $montserrat-bold;
+    size: 12px;
+  }
+  line-height: 16px;
+  color: $base-primary;
+  text-transform: uppercase;
+}
+
+.catalog__subtitle {
+  font: {
+    family: $montserrat-bold;
+    size: 24px;
+  }
+  line-height: 36px;
+}

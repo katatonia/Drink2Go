@@ -1,0 +1,62 @@
+.slider {
+  padding: 20px 45px 60px;
+}
+
+.slider__badge {
+  font: {
+    family: $montserrat-bold;
+    size: 12px;
+  }
+  line-height: 16px;
+  color: $base-primary;
+  text-transform: uppercase;
+}
+
+.slider__heading {
+  font: {
+    family: $montserrat-bold;
+    size: 36px;
+  }
+  line-height: 48px;
+  color: $base-black;
+}
+
+.slider__desc {
+  font: {
+    family: $montserrat-regular;
+    size: 14px;
+  }
+  line-height: 16px;
+  color: $base-black;
+}
+
+.slider__old-price {
+  font: {
+    family: $montserrat-regular;
+    size: 16px;
+  }
+  line-height: 32px;
+  color: $base-primary;
+  text-decoration: line-through;
+}
+
+.slider__price {
+  font: {
+    family: $montserrat-semi-bold;
+    size: 20px;
+  }
+  line-height: 32px;
+  color: $base-black;
+}
+
+.slider__btn {
+  font: {
+    family: $montserrat-regular;
+    size: 16px;
+  }
+  line-height: 24px;
+  color: $white;
+  background-color: $base-primary;
+  padding: 8px 20px;
+  border: none;
+}

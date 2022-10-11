@@ -4,4 +4,19 @@
 @import "global/fonts";
 
 /* BLOCKS */
-@import "blocks/header";
+// Header
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/site-list";
+@import "blocks/promo";
+@import "blocks/slider";
+@import "blocks/features";
+@import "blocks/catalog";
+@import "blocks/filter";
+@import "blocks/stock-list";
+@import "blocks/country-list";
+@import "blocks/sorting";
+@import "blocks/card";
+@import "blocks/pagination";
+@import "blocks/footer-nav";
+@import "blocks/page-footer";

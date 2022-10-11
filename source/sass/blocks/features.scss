@@ -1,0 +1,39 @@
+.features {
+  background-color: $white;
+  padding: 50px 0 60px;
+}
+
+.features__title {
+  font: {
+    family: $montserrat-bold;
+    size: 12px;
+  }
+  line-height: 16px;
+  color: $base-primary;
+  text-transform: uppercase;
+}
+
+.features__subtitle {
+  font: {
+    family: $montserrat-bold;
+    size: 24px;
+  }
+  line-height: 36px;
+}
+
+.features__heading {
+  font: {
+    family: $montserrat-bold;
+    size: 18px;
+    weight: 600;
+  }
+  line-height: 32px;
+}
+
+.features__desc {
+ font: {
+   family: $montserrat-regular;
+   size: 14px;
+ }
+ line-height: 20px;
+}

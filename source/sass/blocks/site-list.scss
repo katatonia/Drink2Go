@@ -1,0 +1,6 @@
+.site-list__item {
+  &--active {
+    color: $base-black;
+    border-bottom: 2px solid $base-primary;
+  }
+}
