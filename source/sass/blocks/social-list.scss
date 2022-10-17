@@ -1,0 +1,46 @@
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  margin-left: 49px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.social-list__icon {
+  width: 22px;
+  height: 22px;
+}
+
+.social-list__link {
+  width: 22px;
+  height: 22px;
+}
+
+.social-list__vk-icon,
+.social-list__ok-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.social-list__printerest-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.social-list__img {
+  fill: $base-grey;
+
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
+    fill: $base-primary;
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+  }
+}

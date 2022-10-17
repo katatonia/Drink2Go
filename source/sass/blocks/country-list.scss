@@ -1,0 +1,52 @@
+.country-list {
+  margin-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 210px;
+  }
+}
+
+.country-list__item {
+  font: {
+    family: $montserrat-regular;
+    size: 16px;
+  }
+  line-height: 24px;
+  padding-bottom: 20px;
+}
+
+.country-list__label {
+  padding-left: 3.2em;
+}
+
+.country-list__input {
+  position: absolute;
+  appearance: none;
+}
+
+.country-list__checkbox {
+  position: absolute;
+  width: 42px;
+  height: 24px;
+  margin-left: -3em;
+  background: url("../../img/svg/checkbox/unchecked.svg") no-repeat 0 0;
+}
+
+/* Checked */
+.country-list__input:checked + .country-list__checkbox  {
+  background: url("../../img/svg/checkbox/checked.svg") no-repeat 0 0;
+}
+
+/* Focused */
+.country-list__input:not(:checked):hover + .country-list__checkbox {
+  background: url("../../img/svg/checkbox/hover-focus.svg") no-repeat 0 0;
+}
+
+/* Disabled */
+.country-list__input:disabled + .country-list__checkbox  {
+  background: url("../../img/svg/checkbox/disabled.svg") no-repeat 0 0;
+}
+
+.country-list__input:not(:checked):disabled + .country-list__checkbox  {
+  background: url("../../img/svg/checkbox/unckecked-disabled.svg") no-repeat 0 0;
+}

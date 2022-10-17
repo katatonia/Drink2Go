@@ -1,0 +1,58 @@
+.page-header {
+  font: {
+    family: $montserrat-regular;
+    size: 12px;
+  }
+  line-height: 16px;
+  background-color: $white;
+}
+
+.page-header__wrapper {
+  @media (min-width: $tablet-width) {
+  display: flex;
+  justify-content: space-between;
+  width: 545px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 952px;
+  }
+}
+
+.page-header__logo-wrapper {
+  padding: 12px 0 8px;
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 0 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.page-header__logo {
+  width: 32px;
+  height: 36px;
+
+  @media (min-width: $desktop-width) {
+    width: 170px;;
+    margin-right: 20px;
+  }
+}
+
+.page-header__slogan {
+  display: none;
+  font: {
+    family: $montserrat-regular;
+    size: 12px;
+  }
+  line-height: 16px;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 170px;
+    margin: 0;
+    padding-top: 3px;
+  }
+}

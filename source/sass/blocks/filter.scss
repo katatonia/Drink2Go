@@ -1,0 +1,260 @@
+.filter {
+ @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-rows: 1fr 100px;
+    grid-template-areas:
+    "price form"
+    "buttons buttons";
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "price"
+    "form"
+    "buttons";
+    height: 700px;
+  }
+}
+
+.filter__buttons-wrapper {
+  @media (min-width: $tablet-width) {
+    margin-right: 50px;
+  }
+}
+
+.filter__form {
+  @media (min-width: $tablet-width) {
+    width: 460px;
+    display: flex;
+    justify-content: space-between;
+    grid-area: form;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    flex-direction: column;
+    grid-area: form;
+    padding-top: 20px;
+  }
+}
+
+.filter__heading {
+  font: {
+    family: $montserrat-semi-bold;
+    size: 16px;
+    weight: 600;
+  }
+  line-height: 34px;
+  margin: 0;
+  padding: 0;
+}
+
+.filter__price {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 227px;
+    margin-bottom: 0;
+    grid-area: price;
+  }
+}
+
+.filter__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: buttons;
+    margin-top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
+}
+
+.filter__btn {
+  width: 160px;
+  font: {
+    family: $montserrat-regular;
+    size: 14px;
+  }
+  line-height: 24px;
+  padding: 10px 9px;
+  border: none;
+  border-radius: 4px;
+
+  &--apply {
+    color: $white;
+    background-color: $base-primary;
+    margin-bottom: 25px;
+
+    @include pseudo-classes;
+
+    @media (min-width: $tablet-width) {
+      width: 149px;
+      margin: 0 25px 0 0;
+    }
+  }
+
+  &--reset {
+    color: $base-primary;
+    background-color: $white;
+
+    @include pseudo-classes;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+    }
+
+    &:disabled {
+      background-color: $light-grey;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 138px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 4px;
+  }
+}
+
+.filter__form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter__price-controls {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 8px;
+  }
+}
+
+.filter__price-controls-input {
+  width: 103px;
+  color: $base-black;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+  padding: 10px 6px;
+  text-align: center;
+
+  &:focus {
+    border: 2px solid $primary-darker;
+  }
+
+  &:disabled {
+    border: 2px solid $light-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 77px;
+  }
+}
+
+.filter__price-controls-input--min {
+  @media (min-width: $tablet-width) {
+    margin-left: 8px;
+  }
+}
+
+.filter__price-controls-input::placeholder {
+  color: $base-grey;
+  text-align: center;
+}
+
+.filter__range-controls{
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 24px 0;
+
+  &:disabled {
+    color: $base-grey;
+  }
+}
+
+.filter__range-scale {
+  width: 280px;
+  height: 5px;
+  background: $light-grey;
+}
+
+.filter__range-bar {
+  width: 240px;
+  height: 5px;
+  background: $primary-lighter;
+
+  @media (min-width: $tablet-width) {
+    width: 206px;
+  }
+}
+
+.filter__range-toggle {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  width: 20px;
+  height: 20px;
+  background-color: $lightest-grey;
+  border: 2px solid $primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover::before,
+  &:focus::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    background-color: $primary-lighter;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:active::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    background-color: $base-primary;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+.filter__range-toggle--min {
+  left: 0;
+
+  @media (min-width: $tablet-width) {
+    left: 7px;
+  }
+}
+
+.filter__range-toggle--max {
+  left: 237px;
+
+  @media (min-width: $tablet-width) {
+    left: 182px;
+  }
+}
+
+.filter__heading .filter__heading--country {
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+  }
+}
