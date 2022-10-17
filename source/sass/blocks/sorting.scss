@@ -1,3 +1,15 @@
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+}
+
 .sorting__text {
   font: {
     family: $montserrat-semi-bold;
@@ -5,9 +17,11 @@
     weight: 600;
   }
   line-height: 24px;
+  padding-left: 4px;
 }
 
-.sorting__control {
+.sorting__select {
+  position: relative;
   font: {
     family: $montserrat-bold;
     size: 16px;
@@ -15,5 +29,35 @@
   line-height: 24px;
   color: $base-primary;
   background-color: $lightest-grey;
+  padding: 4px 0 4px 17px;
   border: none;
+  appearance: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-radius: 4px;
+    background-color: $base-secondary;
+  }
 }
+
+.sorting__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    display: inline-block;
+    border: solid $base-primary;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+

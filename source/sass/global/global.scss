@@ -3,7 +3,6 @@ body {
   padding: 0;
   min-width: 320px;
   overflow-x: hidden;
-  color: $base-black;
 }
 
 img {
@@ -56,15 +55,15 @@ input {
 
 .container {
   box-sizing: border-box;
-  max-width: 748px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
 
   @media (min-width: 1024px) {
     max-width: 1004px;
   }
 
   @media (min-width: 1280px) {
-    max-width: 1260px;
+    max-width: 1400px;
   }
 }

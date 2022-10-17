@@ -1,6 +1,20 @@
 .features {
   background-color: $white;
-  padding: 50px 0 60px;
+}
+
+.features__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0 27px;
+
+  @media (min-width: $tablet-width) {
+    padding: 56px 0 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 101px 0 0 0;
+  }
 }
 
 .features__title {
@@ -11,14 +25,71 @@
   line-height: 16px;
   color: $base-primary;
   text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 5px;
 }
 
 .features__subtitle {
   font: {
-    family: $montserrat-bold;
+    family: $montserrat-semi-bold;
     size: 24px;
   }
-  line-height: 36px;
+  line-height: 35px;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    font: {
+      size: 42px;
+    }
+    line-height: 64px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    font: {
+      family: $montserrat-bold;
+      size: 42px;
+    }
+    line-height: 64px;
+  }
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 27px;
+    grid-row-gap: 45px;
+    padding: 55px 9px 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 70px 0 125px;
+  }
+}
+
+.features__item {
+  text-align: center;
+  padding-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    text-align: left;
+    padding-bottom: 0;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    flex-direction: column;
+  }
 }
 
 .features__heading {
@@ -28,6 +99,20 @@
     weight: 600;
   }
   line-height: 32px;
+  margin: 0;
+  padding: 5px 0 5px;
+
+  @media (min-width: $tablet-width) {
+    font: {
+      size: 24px;
+    }
+    line-height: 36px;
+    padding: 5px 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .features__desc {
@@ -36,4 +121,47 @@
    size: 14px;
  }
  line-height: 20px;
+ margin: 0;
+
+ @media (min-width: $tablet-width) {
+  font: {
+    size: 16px;
+  }
+  line-height: 24px;
+  }
 }
+
+.features__desc span {
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+  }
+}
+
+ .features__speed-icon,
+ .features__fit-icon,
+ .features__energy-icon,
+ .features__eco-icon {
+  width: 52px;
+  height: 56px;
+ }
+
+ .features__item-wrapper {
+  @media (min-width: $tablet-width) {
+    padding-left: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+
+ }
+
+ .features__item-img {
+  @media (min-width: $tablet-width) {
+    padding: 8px 0 0 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0
+  }
+ }

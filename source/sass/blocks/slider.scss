@@ -1,15 +1,57 @@
 .slider {
-  padding: 20px 45px 60px;
+  position: relative;
+  padding: 20px 0 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 54px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .slider__badge {
   font: {
     family: $montserrat-bold;
     size: 12px;
+    weight: 700;
   }
   line-height: 16px;
   color: $base-primary;
   text-transform: uppercase;
+  padding-top: 6px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.slider__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+  }
+}
+
+.slider__item img {
+  @media (min-width: $tablet-width) {
+    width: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+    padding: 29px 0 0 105px;
+  }
 }
 
 .slider__heading {
@@ -19,6 +61,37 @@
   }
   line-height: 48px;
   color: $base-black;
+  text-align: center;
+  margin: 0;
+  padding-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    font: {
+      size: 56px;
+    }
+    line-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.slider__desc-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 590px;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
 }
 
 .slider__desc {
@@ -26,8 +99,36 @@
     family: $montserrat-regular;
     size: 14px;
   }
-  line-height: 16px;
+  line-height: 20px;
   color: $base-black;
+  text-align: center;
+  margin: 0;
+  padding: 10px 20px 19px;
+
+  @media (min-width: $tablet-width) {
+    font: {
+      size: 20px;
+    }
+    line-height: 32px;
+    padding: 15px 110px 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.slider__desc span {
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+  }
+}
+
+.slider__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .slider__old-price {
@@ -38,6 +139,7 @@
   line-height: 32px;
   color: $base-primary;
   text-decoration: line-through;
+  padding-right: 5px;
 }
 
 .slider__price {
@@ -59,4 +161,51 @@
   background-color: $base-primary;
   padding: 8px 20px;
   border: none;
+  border-radius: 4px;
+
+  @include pseudo-classes;
+}
+
+.slider__buy {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.slider__toggles {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.swiper-pagination-bullet {
+  display: none;
+
+  &:hover,
+  &:focus {
+    color: $primary-opacity;
+  }
+
+  &:active {
+    color: $base-primary;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: $white;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $base-primary;
 }

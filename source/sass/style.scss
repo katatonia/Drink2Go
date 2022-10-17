@@ -1,11 +1,13 @@
 /* GLOBAL */
-@import "global/variables";
-@import "global/global";
 @import "global/fonts";
+@import "global/variables";
+@import "global/mixins";
+@import "global/global";
 
 /* BLOCKS */
 // Header
 @import "blocks/page-header";
+// Main
 @import "blocks/main-nav";
 @import "blocks/site-list";
 @import "blocks/promo";
@@ -15,8 +17,14 @@
 @import "blocks/filter";
 @import "blocks/stock-list";
 @import "blocks/country-list";
+@import "blocks/product-list";
 @import "blocks/sorting";
 @import "blocks/card";
 @import "blocks/pagination";
+@import "blocks/user-list";
+@import "blocks/map";
+// Footer
 @import "blocks/footer-nav";
 @import "blocks/page-footer";
+@import "blocks/social-list";
+@import "blocks/contacts-list";

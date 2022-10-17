@@ -1,5 +1,114 @@
+.pagination__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 72px;
+    width: 389px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination__link span {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .pagination__item {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font: {
+    family: $montserrat-regular;
+    size: 16px
+  }
   color: $base-primary;
-  padding: 8px;
+  line-height: 24px;
   background-color: $white;
+  text-decoration: none;
+  padding: 20px 20px 20px 16px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.pagination__item--current {
+  background-color: $lightest-grey;
+  color: $base-black;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
+    background-color: $lightest-grey;
+    color: $base-black;
+  }
+}
+
+.pagination__item--next::before {
+  content: "";
+  display: inline-block;
+  border: solid $base-primary;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform: rotate(-45deg);
+  transform: rotate(-45deg);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__item--next:hover::before {
+  border-color: $white;
+}
+
+.pagination__item--prev::before {
+  content: "";
+  display: inline-block;
+  border: solid $base-primary;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform: rotate(135deg);
+  transform: rotate(135deg);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__item--prev:hover::before {
+  border-color: $white;
 }

@@ -1,3 +1,72 @@
 .promo {
+  position: relative;
   background-color: $flat-white;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(180deg, $flat-white 77%, transparent 50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $flat-white;
+    padding-bottom: 80px;
+  }
+}
+
+.promo__arrows
+.swiper-button-next {
+  position: absolute;
+  top: 328px;
+  right: 0;
+  background: {
+    image: url("../../img/svg/arrow-right.svg");
+    repeat: no-repeat;
+    size: 100% auto;
+    position: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 30px;
+    top: 320px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 30px;
+    top: 357px;
+  }
+}
+
+.promo__arrows
+.swiper-button-prev {
+  position: absolute;
+  top: 328px;
+  left: 0;
+  background: {
+    image: url("../../img/svg/arrow-left.svg");
+    repeat: no-repeat;
+    size: 100% auto;
+    position: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    left: 30px;
+    top: 320px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 30px;
+    top: 357px;
+  }
+}
+
+.promo__arrows
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.promo__arrow {
+  width: 20px;
+  border: none;
+  background-color: $flat-white;
+  padding: 0;
 }

@@ -1,7 +1,56 @@
+.stock-list {
+  margin: 16px 0 -2px;
+
+  @media (min-width: $tablet-width) {
+    margin: 14px 0 -2px;
+  }
+}
+
 .stock-list__item {
   font: {
     family: $montserrat-regular;
     size: 16px;
   }
   line-height: 24px;
+  padding-bottom: 21px;
+}
+
+.stock-list__label {
+  padding-left: 2em;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 2.1em;
+  }
+}
+
+.stock-list__input {
+  position: absolute;
+  appearance: none;
+}
+
+.stock-list__radio {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-left: -2em;
+  background: url("../../img/svg/radio/unchecked.svg") no-repeat 0 0;
+}
+
+/* Checked */
+.stock-list__input:checked + .stock-list__radio  {
+  background: url("../../img/svg/radio/checked.svg") no-repeat 0 0;
+}
+
+/* Focused */
+.stock-list__input:not(:checked):hover + .stock-list__radio {
+  background: url("../../img/svg/radio/hover-focus.svg") no-repeat 0 0;
+}
+
+/* Disabled */
+.stock-list__input:disabled + .stock-list__radio  {
+  background: url("../../img/svg/radio/disabled.svg") no-repeat 0 0;
+}
+
+.stock-list__input:checked:disabled + .stock-list__radio  {
+  background: url("../../img/svg/radio/disabled-checked.svg") no-repeat 0 0;
 }
