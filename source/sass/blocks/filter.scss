@@ -1,18 +1,18 @@
 .filter {
- @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-rows: 1fr 100px;
     grid-template-areas:
-    "price form"
-    "buttons buttons";
+      "price form"
+      "buttons buttons";
   }
 
   @media (min-width: $desktop-width) {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-    "price"
-    "form"
-    "buttons";
+      "price"
+      "form"
+      "buttons";
     height: 700px;
   }
 }
@@ -70,10 +70,6 @@
     grid-area: buttons;
     margin-top: 20px;
   }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .filter__btn {
@@ -105,6 +101,7 @@
     background-color: $white;
 
     @include pseudo-classes;
+
     &:hover,
     &:focus,
     &:active {
@@ -173,7 +170,7 @@
   text-align: center;
 }
 
-.filter__range-controls{
+.filter__range-controls {
   position: relative;
   border-radius: 5px;
   overflow: hidden;

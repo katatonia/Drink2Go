@@ -9,9 +9,9 @@
 
 .page-header__wrapper {
   @media (min-width: $tablet-width) {
-  display: flex;
-  justify-content: space-between;
-  width: 545px;
+    display: flex;
+    justify-content: space-between;
+    width: 545px;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,7 +36,7 @@
   height: 36px;
 
   @media (min-width: $desktop-width) {
-    width: 170px;;
+    width: 170px;
     margin-right: 20px;
   }
 }

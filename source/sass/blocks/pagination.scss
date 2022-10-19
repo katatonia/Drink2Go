@@ -33,7 +33,7 @@
   height: 40px;
   font: {
     family: $montserrat-regular;
-    size: 16px
+    size: 16px;
   }
   color: $base-primary;
   line-height: 24px;
@@ -84,7 +84,6 @@
   border-width: 0 2px 2px 0;
   padding: 3px;
   transform: rotate(-45deg);
-  transform: rotate(-45deg);
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -101,7 +100,6 @@
   border: solid $base-primary;
   border-width: 0 2px 2px 0;
   padding: 3px;
-  transform: rotate(135deg);
   transform: rotate(135deg);
 
   @media (min-width: $tablet-width) {
