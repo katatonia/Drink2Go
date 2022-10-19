@@ -9,26 +9,6 @@
   }
 }
 
-.card__content {
-  flex-grow: 1;
-  padding: 20px 22px 20px 20px;
-
-  @media (min-width: $tablet-width) {
-    padding: 29px 31px 30px 30px;
-  }
-}
-
-.card__photo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 40px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 48px;
-  }
-}
-
 .card__buy {
   display: flex;
   justify-content: space-between;
@@ -95,5 +75,16 @@
 
   @media (min-width: $tablet-width) {
     height: 16px;
+  }
+}
+
+.card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 48px;
   }
 }
