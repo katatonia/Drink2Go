@@ -37,7 +37,7 @@
 }
 
 /* Checked */
-.stock-list__input:checked + .stock-list__radio  {
+.stock-list__input:checked + .stock-list__radio {
   background: url("../../img/svg/radio/checked.svg") no-repeat 0 0;
 }
 
@@ -47,10 +47,10 @@
 }
 
 /* Disabled */
-.stock-list__input:disabled + .stock-list__radio  {
+.stock-list__input:disabled + .stock-list__radio {
   background: url("../../img/svg/radio/disabled.svg") no-repeat 0 0;
 }
 
-.stock-list__input:checked:disabled + .stock-list__radio  {
+.stock-list__input:checked:disabled + .stock-list__radio {
   background: url("../../img/svg/radio/disabled-checked.svg") no-repeat 0 0;
 }

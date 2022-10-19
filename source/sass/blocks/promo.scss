@@ -12,8 +12,7 @@
   }
 }
 
-.promo__arrows
-.swiper-button-next {
+.promo__arrows .swiper-button-next {
   position: absolute;
   top: 328px;
   right: 0;
@@ -35,8 +34,7 @@
   }
 }
 
-.promo__arrows
-.swiper-button-prev {
+.promo__arrows .swiper-button-prev {
   position: absolute;
   top: 328px;
   left: 0;
@@ -58,8 +56,7 @@
   }
 }
 
-.promo__arrows
-.swiper-button-next::after,
+.promo__arrows .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
 }
