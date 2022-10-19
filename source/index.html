@@ -187,90 +187,80 @@
     </section>
 
     <section class="features">
-      <div class="container">
-        <div class="features__wrapper">
+      <div class="features__wrapper container">
           <h2 class="features__title">Преимущества</h2>
           <h3 class="features__subtitle">Главные причины выбрать Drink2Go</h3>
           <ul class="features__list">
             <li class="features__item features__item--speed">
-              <div class="features__item-img">
-                <svg class="features__speed-icon">
+                <svg class="features__item-img features__speed-icon">
                   <use xlink:href="img/sprite.svg#speed"></use>
                 </svg>
-              </div>
               <div class="features__item-wrapper">
                 <p class="features__heading">Скорость</p>
                 <p class="features__desc">Готовый напиток всегда под рукой — <span>просто открой банку</span></p>
               </div>
             </li>
             <li class="features__item features__item--fit">
-              <div class="features__item-img">
-                <svg class="features__fit-icon">
+                <svg class="features__item-img features__fit-icon">
                   <use xlink:href="img/sprite.svg#fit"></use>
                 </svg>
-              </div>
               <div class="features__item-wrapper">
                 <p class="features__heading">Удобство</p>
                 <p class="features__desc">Легко помещается и в карман, <span>и в маленькую сумочку</span>
               </div>
             </li>
             <li class="features__item features__item--energy">
-              <div class="features__item-img">
-                <svg class="features__energy-icon">
+                <svg class="features__item-img features__energy-icon">
                   <use xlink:href="img/sprite.svg#energy"></use>
                 </svg>
-              </div>
               <div class="features__item-wrapper">
                 <p class="features__heading">Бодрость</p>
                 <p class="features__desc">Сбалансированная доза кофеина даст мощный заряд энергии</p>
               </div>
             </li>
             <li class="features__item features__item--eco">
-              <div class="features__item-img">
-                <svg class="features__eco-icon" viewbox="0 0 52 56">
+                <svg class="features__item-img features__eco-icon" viewbox="0 0 52 56">
                   <use xlink:href="img/sprite.svg#eco"></use>
                 </svg>
-              </div>
               <div class="features__item-wrapper">
                 <p class="features__heading">Экологичность</p>
                 <p class="features__desc">Вся упаковка сделана <span>из перерабатываемых материалов</span>
               </div>
             </li>
           </ul>
-        </div>
       </div>
     </section>
 
     <section class="catalog">
-      <div class="container">
-        <div class="catalog__wrapper">
+      <div class="catalog__wrapper container">
           <h2 class="catalog__title">Каталог</h2>
           <h3 class="catalog__subtitle">Каталог кофейных напитков</h3>
 
           <div class="catalog__wrap">
             <section class="catalog__filter filter">
               <h2 class="visually-hidden">Фильтрация</h2>
-              <div class="filter__price">
-                <p class="filter__heading">Цена</p>
-                <div class="filter__range">
-                  <div class="filter__range-controls">
-                    <div class="filter__range-scale">
-                      <div class="filter__range-bar"></div>
-                    </div>
-                    <div class="filter__range-toggle filter__range-toggle--min"></div>
-                    <div class="filter__range-toggle filter__range-toggle--max"></div>
-                  </div>
-                  <div class="filter__price-controls">
-                    <input class="filter__price-controls-input filter__price-controls-input--min" type="text"
-                      placeholder="0">
-                    <span>—</span>
-                    <input class="filter__price-controls-input filter__price-controls-input--max" type="text"
-                      placeholder="900">
-                  </div>
-                </div>
-              </div>
 
               <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
+
+                <div class="filter__price">
+                  <p class="filter__heading">Цена</p>
+                  <div class="filter__range">
+                    <div class="filter__range-controls">
+                      <div class="filter__range-scale">
+                        <div class="filter__range-bar"></div>
+                      </div>
+                      <div class="filter__range-toggle filter__range-toggle--min"></div>
+                      <div class="filter__range-toggle filter__range-toggle--max"></div>
+                    </div>
+                    <div class="filter__price-controls">
+                      <input class="filter__price-controls-input filter__price-controls-input--min" type="text"
+                        placeholder="0">
+                      <span>—</span>
+                      <input class="filter__price-controls-input filter__price-controls-input--max" type="text"
+                        placeholder="900">
+                    </div>
+                  </div>
+                </div>
 
                 <fieldset>
                   <legend class="filter__heading">Наличие молока</legend>
@@ -345,13 +335,16 @@
                     </li>
                   </ul>
                 </fieldset>
-              </form>
-              <div class="filter__buttons">
-                <div class="filter__buttons-wrapper">
-                  <button class="filter__btn filter__btn--apply" type="submit">Применить фильтр</button>
-                  <button class="filter__btn filter__btn--reset" type="submit">Сбросить фильтр</button>
+
+                <div class="filter__buttons">
+                  <div class="filter__buttons-wrapper">
+                    <button class="filter__btn filter__btn--apply" type="submit">Применить фильтр</button>
+                    <button class="filter__btn filter__btn--reset" type="submit">Сбросить фильтр</button>
+                  </div>
                 </div>
-              </div>
+
+              </form>
+
             </section>
 
             <section class="catalog__list">
@@ -369,7 +362,6 @@
 
               <ul class="product-list">
                 <li class="product-list__item card">
-                  <div class="card__photo-container">
                     <a class="card__link" href="#">
                       <picture>
                         <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/white.webp 1x,
@@ -378,8 +370,6 @@
                           width="130" height="188">
                       </picture>
                     </a>
-                  </div>
-                  <div class="card__content">
                     <a class="card__title-link" href="#">
                       <h3 class="card__title">Декаф Флэт Уайт</h3>
                     </a>
@@ -393,10 +383,8 @@
                         В корзину
                       </a>
                     </div>
-                  </div>
                 </li>
                 <li class="product-list__item card">
-                  <div class="card__photo-container">
                     <a class="card__link" href="#">
                       <picture>
                         <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/violet.webp 1x,
@@ -405,8 +393,6 @@
                           width="130" height="188">
                       </picture>
                     </a>
-                  </div>
-                  <div class="card__content">
                     <a class="card__title-link" href="#">
                       <h3 class="card__title">Декаф Флэт Уайт</h3>
                     </a>
@@ -420,10 +406,8 @@
                         В корзину
                       </a>
                     </div>
-                  </div>
                 </li>
                 <li class="product-list__item card">
-                  <div class="card__photo-container">
                     <a class="card__link" href="#">
                       <picture>
                         <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/black.webp 1x,
@@ -432,8 +416,6 @@
                           width="130" height="188">
                       </picture>
                     </a>
-                  </div>
-                  <div class="card__content">
                     <a class="card__title-link" href="#">
                       <h3 class="card__title">Декаф Флэт Уайт</h3>
                     </a>
@@ -447,10 +429,8 @@
                         В корзину
                       </a>
                     </div>
-                  </div>
                 </li>
                 <li class="product-list__item card">
-                  <div class="card__photo-container">
                     <a class="card__link" href="#">
                       <picture>
                         <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/pink.webp 1x,
@@ -459,8 +439,6 @@
                           width="130" height="188">
                       </picture>
                     </a>
-                  </div>
-                  <div class="card__content">
                     <a class="card__title-link" href="#">
                       <h3 class="card__title">Декаф Флэт Уайт</h3>
                     </a>
@@ -474,10 +452,8 @@
                         В корзину
                       </a>
                     </div>
-                  </div>
                 </li>
                 <li class="product-list__item card">
-                  <div class="card__photo-container">
                     <a class="card__link" href="#">
                       <picture>
                         <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/brown.webp 1x,
@@ -486,8 +462,6 @@
                           width="130" height="188">
                       </picture>
                     </a>
-                  </div>
-                  <div class="card__content">
                     <a class="card__title-link" href="#">
                       <h3 class="card__title">Декаф Флэт Уайт</h3>
                     </a>
@@ -501,10 +475,8 @@
                         В корзину
                       </a>
                     </div>
-                  </div>
                 </li>
                 <li class="product-list__item card">
-                  <div class="card__photo-container">
                     <a class="card__link" href="#">
                       <picture>
                         <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/yellow.webp 1x,
@@ -513,8 +485,6 @@
                           width="130" height="188">
                       </picture>
                     </a>
-                  </div>
-                  <div class="card__content">
                     <a class="card__title-link" href="#">
                       <h3 class="card__title">Декаф Флэт Уайт</h3>
                     </a>
@@ -528,10 +498,8 @@
                         В корзину
                       </a>
                     </div>
-                  </div>
                 </li>
                 <li class="product-list__item card">
-                  <div class="card__photo-container">
                     <a class="card__link" href="#">
                       <picture>
                         <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/orange.webp 1x,
@@ -540,8 +508,6 @@
                           width="130" height="188">
                       </picture>
                     </a>
-                  </div>
-                  <div class="card__content">
                     <a class="card__title-link" href="#">
                       <h3 class="card__title">Декаф Флэт Уайт</h3>
                     </a>
@@ -555,10 +521,8 @@
                         В корзину
                       </a>
                     </div>
-                  </div>
                 </li>
                 <li class="product-list__item card">
-                  <div class="card__photo-container">
                     <a class="card__link" href="#">
                       <picture>
                         <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/green.webp 1x,
@@ -567,8 +531,6 @@
                           width="130" height="188">
                       </picture>
                     </a>
-                  </div>
-                  <div class="card__content">
                     <a class="card__title-link" href="#">
                       <h3 class="card__title">Декаф Флэт Уайт</h3>
                     </a>
@@ -582,10 +544,8 @@
                         В корзину
                       </a>
                     </div>
-                  </div>
                 </li>
                 <li class="product-list__item card">
-                  <div class="card__photo-container">
                     <a class="card__link" href="#">
                       <picture>
                         <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/blue.webp 1x,
@@ -594,8 +554,6 @@
                           width="130" height="188">
                       </picture>
                     </a>
-                  </div>
-                  <div class="card__content">
                     <a class="card__title-link" href="#">
                       <h3 class="card__title">Декаф Флэт Уайт</h3>
                     </a>
@@ -609,11 +567,9 @@
                         В корзину
                       </a>
                     </div>
-                  </div>
                 </li>
               </ul>
 
-              <div class="pagination">
                 <ul class="pagination__list">
                   <li class="pagination__item pagination__item--prev">
                     <a class="pagination__link">
@@ -635,18 +591,14 @@
                     </a>
                   </li>
                 </ul>
-              </div>
-
             </section>
           </div>
-        </div>
-
       </div>
     </section>
 
     <section>
       <h2 class="visually-hidden">Карта</h2>
-      <div class="map"></div>
+      <div id="map"></div>
     </section>
 
   </main>
@@ -710,7 +662,7 @@
       <div class="footer-nav__item footer-nav__item--contacts">
         <h3 class="footer-nav__title">Контакты</h3>
         <ul class="footer-nav__list contacts-list">
-          <li class="footer-nav__list-item--address">
+          <li class="footer-nav__list-item footer-nav__list-item--address">
             <svg class="footer-nav__pin-icon">
               <use xlink:href="img/sprite.svg#pin"></use>
             </svg>
@@ -725,15 +677,15 @@
         </ul>
       </div>
     </div>
-    <div class="page-footer__bottom">
-      <span class="page-footer__copyright">Разработано в
-        <a class="page-footer__logo-link" href="">
-          HTML Academy
-          <svg class="page-footer__logo-academy">
-            <use xlink:href="img/sprite.svg#logo-academy"></use>
-          </svg>
-        </a>
-      </span>
+
+    <div class="page-footer__copyright">
+      Разработано в
+      <a class="page-footer__logo-link" href="#">
+        HTML Academy
+        <svg class="page-footer__logo-academy">
+          <use xlink:href="img/sprite.svg#logo-academy"></use>
+        </svg>
+      </a>
     </div>
   </footer>
 

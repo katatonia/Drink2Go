@@ -55,21 +55,16 @@
   justify-content: space-between;
   width: 206px;
   margin: 0 auto;
+  padding: 20px 0 30px;
   font: {
     family: $montserrat-regular;
     size: 12px;
   }
   line-height: 16px;
   color: $base-grey;
-}
-
-.page-footer__bottom {
-  text-align: center;
-  margin: 20px 0 30px;
 
   @media (min-width: $desktop-width) {
     grid-area: bottom;
-    margin-top: 19px;
   }
 }
 
