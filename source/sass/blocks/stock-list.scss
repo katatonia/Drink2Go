@@ -1,9 +1,5 @@
 .stock-list {
   margin: 16px 0 -2px;
-
-  @media (min-width: $tablet-width) {
-    margin: 14px 0 -2px;
-  }
 }
 
 .stock-list__item {
@@ -13,6 +9,10 @@
   }
   line-height: 24px;
   padding-bottom: 21px;
+}
+
+.stock-list__item span {
+  cursor: pointer;
 }
 
 .stock-list__label {
@@ -34,6 +34,7 @@
   height: 24px;
   margin-left: -2em;
   background: url("../../img/svg/radio/unchecked.svg") no-repeat 0 0;
+  transition: 0.3s;
 }
 
 /* Checked */

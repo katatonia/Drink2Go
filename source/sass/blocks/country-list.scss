@@ -15,6 +15,10 @@
   padding-bottom: 20px;
 }
 
+.country-list__item span {
+  cursor: pointer;
+}
+
 .country-list__label {
   padding-left: 3.2em;
 }
@@ -30,6 +34,7 @@
   height: 24px;
   margin-left: -3em;
   background: url("../../img/svg/checkbox/unchecked.svg") no-repeat 0 0;
+  transition: 0.3s;
 }
 
 /* Checked */

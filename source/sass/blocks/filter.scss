@@ -1,41 +1,70 @@
-.filter {
+.filter form {
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-rows: 1fr 100px;
     grid-template-areas:
-      "price form"
+      "price fieldsets"
       "buttons buttons";
+      grid-template-columns: 230px 1fr;
+      column-gap: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      "price"
-      "form"
-      "buttons";
-    height: 700px;
+    display: flex;
+    flex-direction: column;
   }
+}
+
+.filter {
+  @media (min-width: $desktop-width) {
+    margin-left: 20px;
+  }
+}
+
+.filter__fieldsets {
+  @media (min-width: $tablet-width) {
+    grid-area: fieldsets;
+    display: flex;
+    gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.filter__price {
+  grid-area: price;
+  margin-bottom: 20px;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+    padding-bottom: 6px;
+  }
+}
+
+.filter__price-controls span {
+  display: flex;
+  align-items: center;
 }
 
 .filter__buttons-wrapper {
-  @media (min-width: $tablet-width) {
-    margin-right: 50px;
-  }
-}
+  display: flex;
+  flex-direction: column;
 
-.filter__form {
   @media (min-width: $tablet-width) {
-    width: 460px;
-    display: flex;
-    justify-content: space-between;
-    grid-area: form;
+    flex-direction: row;
+    gap: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 318px;
-    flex-direction: column;
-    grid-area: form;
-    padding-top: 20px;
+    flex-direction: row;
+    margin-left: 3px;
   }
 }
 
@@ -48,16 +77,6 @@
   line-height: 34px;
   margin: 0;
   padding: 0;
-}
-
-.filter__price {
-  margin-bottom: 20px;
-
-  @media (min-width: $tablet-width) {
-    width: 227px;
-    margin-bottom: 0;
-    grid-area: price;
-  }
 }
 
 .filter__buttons {
@@ -82,43 +101,29 @@
   padding: 10px 9px;
   border: none;
   border-radius: 4px;
+  transition: 0.3s;
 
   &--apply {
     color: $white;
     background-color: $base-primary;
     margin-bottom: 25px;
 
-    @include pseudo-classes;
-
     @media (min-width: $tablet-width) {
-      width: 149px;
-      margin: 0 25px 0 0;
+      margin-bottom: 0;
     }
   }
 
   &--reset {
     color: $base-primary;
     background-color: $white;
-
-    @include pseudo-classes;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $white;
-    }
-
-    &:disabled {
-      background-color: $light-grey;
-    }
-
-    @media (min-width: $tablet-width) {
-      width: 138px;
-    }
   }
 
   @media (min-width: $tablet-width) {
     padding: 8px 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+   width: 150px;
   }
 }
 
@@ -136,6 +141,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 8px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
 }
 
 .filter__price-controls-input {
@@ -145,23 +154,29 @@
   border-radius: 4px;
   padding: 10px 6px;
   text-align: center;
+  -moz-appearance: textfield;
 
-  &:focus {
-    border: 2px solid $primary-darker;
-  }
-
-  &:disabled {
-    border: 2px solid $light-grey;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
   }
 
   @media (min-width: $tablet-width) {
     width: 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 120px;
   }
 }
 
 .filter__price-controls-input--min {
   @media (min-width: $tablet-width) {
     margin-left: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }
 
@@ -182,76 +197,70 @@
 }
 
 .filter__range-scale {
-  width: 280px;
   height: 5px;
   background: $light-grey;
 }
 
 .filter__range-bar {
-  width: 240px;
   height: 5px;
-  background: $primary-lighter;
-
-  @media (min-width: $tablet-width) {
-    width: 206px;
-  }
-}
-
-.filter__range-toggle {
-  content: "";
-  position: absolute;
-  bottom: 14px;
-  width: 20px;
-  height: 20px;
-  background-color: $lightest-grey;
-  border: 2px solid $primary-lighter;
-  border-radius: 50%;
-  cursor: pointer;
-
-  &:hover::before,
-  &:focus::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 18px;
-    height: 18px;
-    background-color: $primary-lighter;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  &:active::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 18px;
-    height: 18px;
-    background-color: $base-primary;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-}
-
-.filter__range-toggle--min {
   left: 0;
-
-  @media (min-width: $tablet-width) {
-    left: 7px;
-  }
+  right: 0%;
+  position: absolute;
+  background: $primary-lighter;
 }
 
-.filter__range-toggle--max {
-  left: 237px;
+.filter__range-toggles {
+  position: relative;
+}
 
-  @media (min-width: $tablet-width) {
-    left: 182px;
-  }
+.filter__range-toggles input {
+  position: absolute;
+  width: 98.7%;
+  height: 5px;
+  top: -7px;
+  background: none;
+  -webkit-appearance: none;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  pointer-events: auto;
+  background: $base-primary;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  -moz-appearance: none;
+  pointer-events: auto;
+  background: $base-primary;
 }
 
 .filter__heading .filter__heading--country {
   @media (min-width: $desktop-width) {
     margin-top: 20px;
   }
+}
+
+// Скрытие плейсходера
+.filter__price-controls-input:focus::-webkit-input-placeholder {
+  color: transparent
+}
+
+.filter__price-controls-input:focus::-moz-placeholder {
+  color: transparent
+}
+
+.filter__price-controls-input:focus:-moz-placeholder {
+  color: transparent
+}
+
+.filter__price-controls-input:focus:-ms-input-placeholder {
+  color: transparent
 }

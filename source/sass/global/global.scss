@@ -2,7 +2,11 @@ body {
   margin: 0;
   padding: 0;
   min-width: 320px;
-  overflow-x: hidden;
+  cursor: default;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 img {
@@ -27,6 +31,11 @@ li {
 
 input {
   outline: none;
+}
+
+button,
+a {
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -58,12 +67,5 @@ input {
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
-
-  @media (min-width: 1024px) {
-    max-width: 1004px;
-  }
-
-  @media (min-width: 1280px) {
-    max-width: 1400px;
-  }
+  max-width: 1440px;
 }

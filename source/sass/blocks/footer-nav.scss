@@ -6,6 +6,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 10px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
+    margin-left: 38px;
+  }
 }
 
 .footer-nav__item {
@@ -31,23 +36,9 @@
     grid-area: contacts;
     padding-bottom: 4px;
   }
-}
 
-.footer-nav__list-item--address {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-
-    span {
-      font: {
-        family: $montserrat-regular;
-        size: 14px;
-      }
-      line-height: 20px;
-      width: 204px;
-      padding-bottom: 0;
-      text-transform: none;
-    }
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 
@@ -64,6 +55,10 @@
   @media (min-width: $tablet-width) {
     padding: 0 0 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 17px;
+  }
 }
 
 .footer-nav__list-item {
@@ -72,24 +67,51 @@
     size: 12px;
   }
   line-height: 16px;
-  text-transform: uppercase;
   padding-bottom: 20px;
   cursor: pointer;
+  transition: 0.3s;
 
-  &:hover,
-  &:focus {
-    color: $primary-lighter;
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
   }
 
+  &:hover,
+  &:focus,
   &:active {
-    color: $primary-darker;
+    color: $base-primary;
+  }
+}
+
+.footer-nav__list-item--address {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font: {
+        family: $montserrat-medium;
+        size: 14px;
+      }
+      line-height: 20px;
+      width: 204px;
+      padding-bottom: 0;
+
+      @media (min-width: $tablet-width) {
+        width: 100%;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
   }
 }
 
 .footer-nav__pin-icon,
 .footer-nav__phone-icon {
-  width: 13px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   fill: $base-primary;
 }
 

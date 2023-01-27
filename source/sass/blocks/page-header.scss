@@ -10,12 +10,9 @@
 .page-header__wrapper {
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
-    width: 545px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 952px;
+    justify-content: flex-start;
+    width: auto;
+    gap: 30px;
   }
 }
 
@@ -34,6 +31,7 @@
 .page-header__logo {
   width: 32px;
   height: 36px;
+  cursor: default;
 
   @media (min-width: $desktop-width) {
     width: 170px;

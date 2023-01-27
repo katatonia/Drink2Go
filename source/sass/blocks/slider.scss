@@ -11,6 +11,12 @@
   }
 }
 
+.slider__list {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+  }
+}
+
 .slider__badge {
   font: {
     family: $montserrat-bold;
@@ -75,6 +81,7 @@
   @media (min-width: $desktop-width) {
     padding: 0;
     text-align: left;
+    margin-bottom: 20px;
   }
 }
 
@@ -91,6 +98,8 @@
     width: 590px;
     align-items: flex-start;
     padding-bottom: 0;
+    margin-left: 135px;
+    margin-top: 20px;
   }
 }
 
@@ -110,18 +119,13 @@
       size: 20px;
     }
     line-height: 32px;
-    padding: 15px 110px 19px;
+    padding: 15px 85px 19px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
     text-align: left;
-  }
-}
-
-.slider__desc span {
-  @media (min-width: $desktop-width) {
-    display: inline-block;
+    margin-bottom: 40px;
   }
 }
 
@@ -162,8 +166,7 @@
   padding: 8px 20px;
   border: none;
   border-radius: 4px;
-
-  @include pseudo-classes;
+  transition: 0.3s;
 }
 
 .slider__buy {
@@ -187,6 +190,7 @@
 
 .swiper-pagination-bullet {
   display: none;
+  border-radius: 0;
 
   &:hover,
   &:focus {
@@ -208,4 +212,5 @@
 
 .swiper-pagination-bullet-active {
   background-color: $base-primary;
+  border-radius: 0;
 }

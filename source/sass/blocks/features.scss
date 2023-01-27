@@ -13,7 +13,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 101px 0 0 0;
+    padding: 101px 20px 0;
   }
 }
 
@@ -66,12 +66,12 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 27px;
     grid-row-gap: 45px;
-    padding: 55px 9px 101px;
+    padding: 55px 27px 101px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    padding: 70px 0 125px;
+    padding: 77px 0 125px;
   }
 }
 
@@ -87,6 +87,7 @@
 
 
   @media (min-width: $desktop-width) {
+    align-items: center;
     text-align: center;
     flex-direction: column;
   }
@@ -112,6 +113,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    padding-bottom: 10px;
   }
 }
 
@@ -143,6 +145,10 @@
 .features__eco-icon {
   width: 52px;
   height: 56px;
+
+  @media (min-width: $tablet-width) {
+    width: 103px;
+  }
 }
 
 .features__item-wrapper {
@@ -162,5 +168,6 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
+    padding-bottom: 20px;
   }
 }

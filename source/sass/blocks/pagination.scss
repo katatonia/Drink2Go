@@ -4,12 +4,19 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 40px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     padding-top: 72px;
     width: 389px;
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 58px;
+    margin: 0;
+    margin-left: auto;
   }
 }
 
@@ -38,21 +45,7 @@
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background-color: $primary-lighter;
-    color: $white;
-  }
-
-  &:active {
-    background-color: $primary-darker;
-  }
-
-  &:disabled {
-    background-color: $light-grey;
-    color: $white;
-  }
+  transition: 0.3s;
 
   @media (min-width: $tablet-width) {
     width: auto;

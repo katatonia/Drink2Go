@@ -6,7 +6,8 @@
   margin-left: 49px;
 
   @media (min-width: $desktop-width) {
-    margin-left: 0;
+    margin-left: 10px;
+    width: 140px;
   }
 }
 
@@ -33,14 +34,11 @@
 
 .social-list__img {
   fill: $base-grey;
+  transition: 0.3s;
 
   &:hover,
-  &:focus {
-    background-color: $base-secondary;
-    fill: $base-primary;
-  }
-
+  &:focus,
   &:active {
-    background-color: $primary-opacity;
+    fill: $base-primary;
   }
 }

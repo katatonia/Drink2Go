@@ -5,8 +5,13 @@
   }
   line-height: 16px;
 
-  @media (min-width: $desktop-width) {
-    width: 477px;
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row-reverse;
   }
 }
 
@@ -30,16 +35,12 @@
   width: 18px;
   height: 21px;
   background: url("../../img/svg/burger.svg") no-repeat 0 0;
-
-  &:active {
-    background-color: $base-secondary;
-  }
 }
 
 .main-nav--opened .main-nav__toggle {
   width: 18px;
-  height: 17px;
-  background: url("../../img/svg/opened.svg") no-repeat 0 0;
+  height: 21px;
+  background: url("../../img/svg/close-icon.svg") no-repeat 0 0;
 }
 
 .main-nav--nojs .main-nav__toggle {

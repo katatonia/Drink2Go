@@ -1,9 +1,12 @@
 .page-footer {
+  padding: 0;
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-areas:
       "wrapper nav"
-      "bottom bottom";
+      "copyright copyright";
+    grid-template-columns: auto 1fr;
   }
 }
 
@@ -12,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid $base-secondary;
-  padding: 17px 26px 18px 20px;
+  padding: 21px 26px 18px 20px;
 
   @media (min-width: $tablet-width) {
     padding-top: 40px;
@@ -24,6 +27,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 40px;
   }
 }
 
@@ -46,6 +51,7 @@
     color: $base-black;
     line-height: 20px;
     margin: 0;
+    margin-bottom: 58px;
   }
 }
 
@@ -64,7 +70,16 @@
   color: $base-grey;
 
   @media (min-width: $desktop-width) {
-    grid-area: bottom;
+    grid-area: copyright;
+    padding-top: 8px;
+  }
+}
+
+.page-footer__logo {
+  cursor: default;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
   }
 }
 
@@ -72,27 +87,21 @@
   display: flex;
 
   &:hover,
-  &:focus {
-    color: $base-primary;
-  }
-
+  &:focus,
   &:active {
-    color: $primary-darker;
+    color: $base-primary;
+    fill: $base-primary;
   }
 }
 
-.page-footer__logo-academy {
+.page-footer__logo-link svg {
   width: 12px;
   height: 16px;
   fill: $base-grey;
   padding-left: 2px;
 
-  &:hover,
-  &:focus {
-    fill: $base-primary;
-  }
+}
 
-  &:active {
-    fill: $primary-darker;
-  }
+.page-footer__logo-link:hover svg {
+  fill: $base-primary;
 }

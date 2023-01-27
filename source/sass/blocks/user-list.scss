@@ -2,19 +2,20 @@
   position: absolute;
   width: 138px;
   top: 20px;
-  right: 20px;
+  right: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    width: 78px;
-    margin-right: 19px;
-    padding-top: 11px;
+    width: fit-content;
+    margin-right: 25px;
+    gap: 30px;
+    position: relative;
+    transform: translate(50%, -50%);
   }
 
   @media (min-width: $desktop-width) {
-    width: 217px;
     margin-right: 42px;
   }
 }
@@ -25,14 +26,7 @@
     size: 12px;
   }
   line-height: 16px;
-
-  &:active {
-    background-color: $lightest-grey;
-  }
-
-  @media (min-width: $tablet-width) {
-    @include pseudo-classes-icons;
-  }
+  cursor: pointer;
 
   @media (min-width: $desktop-width) {
     a {
@@ -41,17 +35,23 @@
   }
 }
 
+.user-list__item svg,
+.user-list__item svg {
+  fill: $primary-darker;
+}
+
 .user-list__basket-icon,
 .user-list__user-icon {
   width: 18px;
   height: 21px;
+  padding-top: 2px;
 }
 
 .user-list__user span,
-.user-list__item span {
+.user-list__basket span {
   display: none;
 
   @media (min-width: $desktop-width) {
-    display: block;
+    padding: 3px 0 0 3px;
   }
 }
