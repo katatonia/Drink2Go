@@ -101,7 +101,7 @@
   padding: 10px 9px;
   border: none;
   border-radius: 4px;
-  transition: 0.3s;
+  transition: .3s;
 
   &--apply {
     color: $white;
@@ -116,6 +116,10 @@
   &--reset {
     color: $base-primary;
     background-color: $white;
+  }
+
+  &:hover {
+    opacity: .5;
   }
 
   @media (min-width: $tablet-width) {

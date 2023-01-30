@@ -86,11 +86,9 @@
 .page-footer__logo-link {
   display: flex;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $base-primary;
-    fill: $base-primary;
+  &:hover {
+    color: rgba(120, 89, 207, 0.7);
+    fill: rgba(120, 89, 207, 0.7);
   }
 }
 
@@ -99,7 +97,6 @@
   height: 16px;
   fill: $base-grey;
   padding-left: 2px;
-
 }
 
 .page-footer__logo-link:hover svg {

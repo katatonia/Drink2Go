@@ -75,10 +75,8 @@
     font-size: 14px;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $base-primary;
+  &:hover {
+    color: rgba(0, 0, 0, .5);
   }
 }
 

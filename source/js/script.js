@@ -121,7 +121,7 @@ const resetFilters = () => {
     })
   });
 
-const movePriceRange = () => {
+const changePriceInput = () => {
   if (maxToggle.value - minToggle.value < priceGap) {
     if (e.target.className === 'filter__range-toggle-min') {
       minToggle.value = maxToggle.value - priceGap;
@@ -137,7 +137,7 @@ const movePriceRange = () => {
 }
 
 const onInputValueChange = () => {
-  function callback() {
+  function movePriceRange() {
     if (minInput.value < maxInput.value) {
       minToggle.value = minInput.value;
       maxToggle.value = maxInput.value;
@@ -146,11 +146,25 @@ const onInputValueChange = () => {
     }
   }
 
-  minInput.addEventListener('input', callback);
-  maxInput.addEventListener('input', callback);
+  function checkEmptyInput() {
+    if (minInput.value.length === 0) {
+      minToggle.value = 0;
+      rangeBar.style.left = 0;
+    }
+
+    if (maxInput.value.length === 0 || maxInput.value.length < 3) {
+      maxToggle.value = 900;
+      rangeBar.style.right = 0;
+    }
+  }
+
+  minInput.addEventListener('input', movePriceRange);
+  maxInput.addEventListener('input', movePriceRange);
+  minInput.addEventListener('input', checkEmptyInput);
+  maxInput.addEventListener('input', checkEmptyInput);
 }
 
-movePriceRange();
+changePriceInput();
 resetFilters();
 onInputValueChange();
 

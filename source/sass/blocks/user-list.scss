@@ -38,6 +38,10 @@
 .user-list__item svg,
 .user-list__item svg {
   fill: $primary-darker;
+
+  &:hover {
+    fill: rgba(120, 89, 207, 0.7);
+  }
 }
 
 .user-list__basket-icon,

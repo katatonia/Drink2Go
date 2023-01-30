@@ -1,7 +1,7 @@
 .card {
   background-color: $white;
   padding: 20px;
-  transition: 0.3s;
+  transition: .3s;
 
   &:hover,
   &:focus {
@@ -73,7 +73,11 @@
   background-color: $base-primary;
   border-radius: 4px;
   padding: 8px 20px;
-  transition: 0.3s;
+  transition: .3s;
+
+  &:hover {
+    background-color:rgba(120, 89, 207, 0.7);;
+  }
 }
 
 .card__add-basket-icon {

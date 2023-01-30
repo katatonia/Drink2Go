@@ -34,11 +34,9 @@
 
 .social-list__img {
   fill: $base-grey;
-  transition: 0.3s;
+  transition: .3s;
 
-  &:hover,
-  &:focus,
-  &:active {
-    fill: $base-primary;
+  &:hover {
+    fill: rgba(120, 89, 207, 0.7);
   }
 }

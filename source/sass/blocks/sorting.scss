@@ -63,7 +63,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -71,6 +71,10 @@
   box-shadow: none;
   border: 0;
   flex: 1;
+
+  &:hover {
+    opacity: .5;
+  }
 
   &::-ms-expand {
     display: none;

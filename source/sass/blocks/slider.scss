@@ -166,7 +166,11 @@
   padding: 8px 20px;
   border: none;
   border-radius: 4px;
-  transition: 0.3s;
+  transition: .3s;
+
+  &:hover {
+    opacity: .5;
+  }
 }
 
 .slider__buy {
